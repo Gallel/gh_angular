@@ -10,3 +10,9 @@
     </div>
   </div>
 </div>
+
+<div class="pagination">
+  <button (click)="goToPage(currentPage - 1)" [disabled]="!info.prev">Previous</button>
+  <span>Page {{ currentPage }} of {{ info.pages }}</span>
+  <button (click)="goToPage(currentPage + 1)" [disabled]="!info.next">Next</button>
+</div>

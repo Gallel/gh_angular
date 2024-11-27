@@ -1,3 +1,4 @@
+// File: src/app/services/rick-and-morty.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -10,8 +11,8 @@ export class RickAndMortyService {
 
   constructor(private http: HttpClient) {}
 
-  getCharacters(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/character`);
+  getCharacters(page: number = 1): Observable<any> {
+    return this.http.get(`${this.apiUrl}/character?page=${page}`);
   }
 
   getCharacter(id: number): Observable<any> {

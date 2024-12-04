@@ -21,9 +21,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./RickAndMorty
 
     - name: Run unit tests
       run: npm test
+      working-directory: ./RickAndMorty
 
   deploy:
     runs-on: ubuntu-latest
@@ -41,12 +43,14 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./RickAndMorty
 
     - name: Build project
-      run: npm run build -- --output-path=dist --base-href=/repository/
+      run: npm run build -- --configuration=github-pages
+      working-directory: ./RickAndMorty
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./RickAndMorty/dist/rick-and-morty

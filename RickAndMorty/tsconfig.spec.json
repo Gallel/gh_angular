@@ -4,12 +4,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": [
-      "jasmine"
-    ]
+    "types": ["jasmine", "node"]
   },
+  "files": [],
   "include": [
-    "src/**/*.spec.ts",
+    "src/**/*.spec.ts", // Incluye todos los archivos de prueba
     "src/**/*.d.ts"
   ]
 }

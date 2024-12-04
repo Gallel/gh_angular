@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:RickAndMorty": "node dist/rick-and-morty/server/server.mjs"
+    "serve:ssr:RickAndMorty": "node dist/rick-and-morty/server/server.mjs",
+    "deploy": "ng build --prod --base-href=/repository/ && ngh --dir=dist/rick-and-morty"
   },
   "private": true,
   "dependencies": {

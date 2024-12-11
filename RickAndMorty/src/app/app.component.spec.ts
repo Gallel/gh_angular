@@ -11,13 +11,13 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app and display CharacterListComponent', () => {
+  it('should create the app and display router-outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
 
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-character-list')).not.toBeNull();
+    expect(compiled.querySelector('router-outlet')).not.toBeNull();
   });
 });

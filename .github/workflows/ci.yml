@@ -47,11 +47,11 @@ jobs:
       working-directory: ./RickAndMorty
 
     - name: Build project
-      run: npm run build -- --configuration=production
+      run: npm run build -- --configuration=github-pages
       working-directory: ./RickAndMorty
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_TOKEN }}
         publish_dir: ./RickAndMorty/dist/RickAndMorty

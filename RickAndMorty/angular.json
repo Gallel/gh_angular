@@ -64,7 +64,7 @@
               ]
             },
             "github-pages": {
-              "baseHref": "/rick-and-morty/",
+              "baseHref": "/gh_angular/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

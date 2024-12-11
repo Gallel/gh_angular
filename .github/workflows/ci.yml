@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20.17.0' # Actualitza la versió de Node.js
+        node-version: '20.17.0'
 
     - name: Install dependencies
       run: npm install
@@ -31,7 +31,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' }}
 
     steps:
     - name: Checkout repository
@@ -40,18 +40,18 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20.17.0' # Actualitza la versió de Node.js
+        node-version: '20.17.0'
 
     - name: Install dependencies
       run: npm install
       working-directory: ./RickAndMorty
 
     - name: Build project
-      run: npm run build -- --configuration=github-pages
+      run: npm run build -- --configuration=production
       working-directory: ./RickAndMorty
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        publish_dir: ./RickAndMorty/dist/rick-and-morty
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./RickAndMorty/dist/RickAndMorty

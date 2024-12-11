@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { CharacterListComponent } from './components/character-list/character-list.component';
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CharacterListComponent],
+  imports: [RouterModule, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

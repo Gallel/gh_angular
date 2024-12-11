@@ -1,13 +1,13 @@
-// File: src/app/components/character-list/character-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { RickAndMortyService } from '../../services/rick-and-morty.service';
+import { ReplacePipe } from '../../pipes/replace.pipe';
 
 @Component({
   selector: 'app-character-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, ReplacePipe],
   templateUrl: './character-list.component.html',
   styleUrls: ['./character-list.component.scss']
 })

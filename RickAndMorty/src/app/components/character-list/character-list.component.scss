@@ -19,6 +19,7 @@
   overflow: hidden; /* Ensure content does not overflow */
   background-color: #fff;
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .character-card:hover {

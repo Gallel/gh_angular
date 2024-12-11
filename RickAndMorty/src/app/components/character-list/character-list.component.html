@@ -1,6 +1,6 @@
 <!-- File: src/app/components/character-list/character-list.component.html -->
 <div class="character-list">
-  <div *ngFor="let character of characters" class="character-card">
+  <div *ngFor="let character of characters" class="character-card" [routerLink]="['/personatges', character.id, character.name | lowercase | replace: ' ': '-']">
     <img [src]="character.image" alt="{{ character.name }}" class="character-image">
     <div class="character-details">
       <h2 class="character-name">{{ character.name }}</h2>

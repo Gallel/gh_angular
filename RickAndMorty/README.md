@@ -1,59 +1,79 @@
 # RickAndMorty
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+Aquest projecte ha estat generat utilitzant [Angular CLI](https://github.com/angular/angular-cli) versió 19.0.0.
 
-## Development server
+## Descripció del Projecte
 
-To start a local development server, run:
+RickAndMorty és una aplicació web que permet als usuaris explorar informació sobre els personatges i episodis de la sèrie Rick and Morty. L'aplicació inclou funcionalitats com la visualització de llistats de personatges, detalls de personatges, i un calendari que mostra les dates d'emissió dels episodis.
+
+## Servidor de Desenvolupament
+
+Per iniciar un servidor de desenvolupament local, executa:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Un cop el servidor estigui en funcionament, obre el teu navegador i navega a `http://localhost:4200/`. L'aplicació es recarregarà automàticament cada vegada que modifiquis algun dels fitxers de codi font.
 
-## Code scaffolding
+## Generació de Codi
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI inclou eines potents per a la generació de codi. Per generar un nou component, executa:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Per obtenir una llista completa dels schematics disponibles (com ara `components`, `directives`, o `pipes`), executa:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Construcció
 
-To build the project run:
+Per construir el projecte, executa:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Això compilarà el teu projecte i emmagatzemarà els artefactes de construcció a la carpeta `dist/`. Per defecte, la construcció de producció optimitza la teva aplicació per a rendiment i velocitat.
 
-## Running unit tests
+## Execució de Tests Unitaris
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Per executar tests unitaris amb el test runner [Karma](https://karma-runner.github.io), utilitza el següent comandament:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Execució de Tests End-to-End
 
-For end-to-end (e2e) testing, run:
+Per executar tests end-to-end (e2e), executa:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI no inclou un framework de proves end-to-end per defecte. Pots triar el que millor s'adapti a les teves necessitats.
 
-## Additional Resources
+## Proves amb Selenium
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Aquest projecte utilitza Selenium per validar la informació dels personatges i la navegació entre pàgines. Les proves es troben a la carpeta `selenium-tests`.
+
+Per executar les proves amb Selenium, assegura't de tenir instal·lades les dependències necessàries:
+
+```bash
+npm install selenium-webdriver chromedriver
+```
+
+Després, executa les proves amb el següent comandament:
+
+```bash
+node selenium-tests/character-detail-page.spec.js
+```
+
+## Recursos Addicionals
+
+Per obtenir més informació sobre l'ús de l'Angular CLI, incloent referències detallades de comandaments, visita la pàgina [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).

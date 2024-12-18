@@ -1,0 +1,10 @@
+.calendar-container {
+  width: 500px;
+  margin: 0 auto; /* Centrar la secció horitzontalment */
+}
+
+.mat-calendar .mat-calendar-body-cell.event-date {
+    background-color: var(--event-bg-color, #4caf50) !important;
+    color: var(--event-text-color, #fff) !important;
+    border-radius: 50%;
+}

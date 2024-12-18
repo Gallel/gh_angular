@@ -28,6 +28,18 @@ jobs:
       run: npm test
       working-directory: ./RickAndMorty
     
+    # Iniciar el servidor Angular en segon pla
+    - name: Start Angular server
+      run: npm start -- --host 0.0.0.0 --disable-host-check &
+      working-directory: ./RickAndMorty
+
+    # Esperar uns segons per assegurar que el servidor està llest
+    - name: Wait for Angular server
+      run: |
+        echo "Waiting for the server to start..."
+        sleep 10
+
+    # Executar els tests de Selenium
     - name: Run Selenium tests
       run: node selenium-tests/character-detail-page.spec.js
       working-directory: ./RickAndMorty

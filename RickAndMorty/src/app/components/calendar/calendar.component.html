@@ -1,0 +1,12 @@
+<section class="calendar-container">
+  <mat-calendar 
+    [selected]="selectedDate" 
+    (selectedChange)="onDateChange($event)" 
+    [dateClass]="dateClass"
+    style="--event-bg-color: #4caf50;">
+  </mat-calendar>
+</section>
+
+<div *ngIf="selectedEvent">
+  <h2>{{ selectedEvent }}</h2>
+</div>
